@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stripe Learning App - Apresentação</title>
 
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Learn Stripe: app de estudo com Kotlin Multiplatform + Compose Multiplatform, Clean Architecture + MVVM e integração de pagamentos com Stripe."
+    />
+    <link
+      rel="canonical"
+      href="https://braddteles.github.io/portfolio-stripe-learning-app/"
+    />
+
+    <!-- Open Graph (LinkedIn) -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Stripe Learning App" />
+    <meta
+      property="og:title"
+      content="Stripe Learning App (Learn Stripe) — KMP + Compose + Stripe"
+    />
+    <meta
+      property="og:description"
+      content="Landing do Learn Stripe: app de loja com fluxo de pagamento Stripe, arquitetura Clean + MVVM e stack Kotlin Multiplatform/Compose Multiplatform."
+    />
+    <meta
+      property="og:url"
+      content="https://braddteles.github.io/portfolio-stripe-learning-app/"
+    />
+    <meta
+      property="og:image"
+      content="https://braddteles.github.io/portfolio-stripe-learning-app/docs/img/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card (ajuda em outros previews também) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stripe Learning App (Learn Stripe) — KMP + Compose + Stripe"
+    />
+    <meta
+      name="twitter:description"
+      content="KMP + Compose Multiplatform + Stripe • Clean Architecture + MVVM • demo e telas do app."
+    />
+    <meta
+      name="twitter:image"
+      content="https://braddteles.github.io/portfolio-stripe-learning-app/docs/img/og-image.png"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,22 +72,27 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <div class="container">
-        <nav>
-          <a href="#" class="logo">
+        <nav aria-label="Navegação principal">
+          <a href="#" class="logo" aria-label="Stripe Learning App (início)">
             <img
               src="docs/img/logo_stripe.png"
               alt="Stripe Learning App Logo"
               class="nav-logo"
+              decoding="async"
             />
             <span>Stripe Learning App</span>
           </a>
+
           <ul class="nav-links">
             <li><a href="#about">Sobre</a></li>
             <li><a href="#features">Funcionalidades</a></li>
+            <li><a href="#video">Demonstração</a></li>
             <li><a href="#gallery">Telas</a></li>
+            <li><a href="#tech">Tecnologias</a></li>
           </ul>
         </nav>
       </div>
@@ -50,10 +103,26 @@
         <div class="container">
           <h1>Stripe Learning App</h1>
           <p>
-            Um aplicativo de aprendizado, que levou o nome de <strong><em>Learn Stripe</em></strong> foi construído com Kotlin Multiplatform e
-            Compose, explorando o ecossistema de pagamentos da Stripe de ponta a
-            ponta.
+            Um aplicativo de aprendizado, que levou o nome de
+            <strong><em>Learn Stripe</em></strong> foi construído com Kotlin
+            Multiplatform e Compose, explorando o ecossistema de pagamentos da
+            Stripe de ponta a ponta.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#video">
+              <i class="fa-solid fa-circle-play"></i> Assistir demo
+            </a>
+
+            <a
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener"
+              href="https://youtu.be/_uwWgCnEOLk?si=G2exOYEjEllK1X62"
+            >
+              <i class="fa-brands fa-youtube"></i> Abrir no YouTube
+            </a>
+          </div>
         </div>
       </section>
 
@@ -70,11 +139,10 @@
                 moderno.
               </p>
               <p>
-                Utilizando <strong>KMP</strong>, a lógica de
-                negócio, acesso a dados e ViewModels são compartilhados,
-                enquanto a UI é construída com
-                <strong>Compose Multiplatform</strong>, rodando nativamente no
-                Android.
+                Utilizando <strong>KMP</strong>, a lógica de negócio, acesso a
+                dados e ViewModels são compartilhados, enquanto a UI é construída
+                com <strong>Compose Multiplatform</strong>, rodando nativamente
+                no Android.
               </p>
             </div>
             <div>
@@ -82,9 +150,10 @@
               <p>
                 A arquitetura segue os princípios de
                 <strong>Clean Architecture + MVVM</strong>. O sistema é dividido
-                em duas partes: o App Cliente e um <strong>Backend Ktor</strong>
-                seguro, que protege as chaves da API e orquestra as chamadas
-                sensíveis, garantindo um fluxo de pagamento seguro e escalável.
+                em duas partes: o App Cliente e um
+                <strong>Backend Ktor</strong> seguro, que protege as chaves da
+                API e orquestra as chamadas sensíveis, garantindo um fluxo de
+                pagamento seguro e escalável.
               </p>
             </div>
           </div>
@@ -94,6 +163,7 @@
       <section id="features" class="fade-in-section">
         <div class="container">
           <h2 class="section-title">Funcionalidades</h2>
+
           <div class="grid-2">
             <div class="feature-card">
               <i class="fa-solid fa-store"></i>
@@ -103,6 +173,7 @@
                 do app.
               </p>
             </div>
+
             <div class="feature-card">
               <i class="fa-solid fa-credit-card"></i>
               <h3>Pagamento Seguro</h3>
@@ -111,6 +182,7 @@
                 da Stripe para Android.
               </p>
             </div>
+
             <div class="feature-card">
               <i class="fa-solid fa-boxes-stacked"></i>
               <h3>Controle de Estoque</h3>
@@ -119,6 +191,7 @@
                 movimentações de entrada e saída.
               </p>
             </div>
+
             <div class="feature-card">
               <i class="fa-solid fa-book"></i>
               <h3>Histórico de Compras</h3>
@@ -127,6 +200,7 @@
                 filtros e estatísticas.
               </p>
             </div>
+
             <div class="feature-card">
               <i class="fa-solid fa-receipt"></i>
               <h3>Comprovantes e Boleto</h3>
@@ -139,19 +213,37 @@
         </div>
       </section>
 
-      <section id="tech" class="fade-in-section">
+      <section id="video" class="fade-in-section">
         <div class="container">
-          <h2 class="section-title">Tecnologias</h2>
-          <div class="tech-stack">
-            <span class="tech-card">Kotlin Multiplatform</span>
-            <span class="tech-card">Compose Multiplatform</span>
-            <span class="tech-card">Stripe SDK</span>
-            <span class="tech-card">Ktor (Client & Server)</span>
-            <span class="tech-card">Koin</span>
-            <span class="tech-card">SQLDelight</span>
-            <span class="tech-card">Voyager Navigation</span>
-            <span class="tech-card">Kamel</span>
-            <span class="tech-card">Material 3 Expressive</span>
+          <h2 class="section-title">Demonstração</h2>
+
+          <p class="section-subtitle">
+            Assista à demo diretamente aqui. Se preferir, também dá para abrir no
+            YouTube em maior qualidade.
+          </p>
+
+          <div class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/_uwWgCnEOLk?rel=0&modestbranding=1"
+                title="Demonstração - Stripe Learning App"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="video-actions">
+              <a
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                href="https://youtu.be/_uwWgCnEOLk?si=G2exOYEjEllK1X62"
+              >
+                <i class="fa-brands fa-youtube"></i> Ver no YouTube (4K)
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -159,51 +251,36 @@
       <section id="gallery" class="fade-in-section">
         <div class="container">
           <h2 class="section-title">Galeria de Telas</h2>
+
           <div class="screenshot-gallery">
-            <img
-              src="./docs/img/tela_01_principal_produtos.png"
-              alt="Tela Principal de Produtos"
-            />
-            <img
-              src="./docs/img/tela_02_detalhes_produto.png"
-              alt="Tela de Detalhes do Produto"
-            />
-            <img
-              src="./docs/img/tela_03_formulario_produto.png"
-              alt="Tela de Formulário de Produto"
-            />
-            <img
-              src="./docs/img/tela_04.1_pagamento_preparacao.png"
-              alt="Tela de Preparação do Pagamento"
-            />
-            <img
-              src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png"
-              alt="Formas de Pagamento (Stripe PaymentSheet)"
-            />
-            <img
-              src="./docs/img/tela_05.1_detalhes_compra.png"
-              alt="Tela de Detalhes da Compra"
-            />
-            <img
-              src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png"
-              alt="Compartilhamento de Comprovante"
-            />
-            <img
-              src="./docs/img/tela_06_historico_compras.png"
-              alt="Tela de Histórico de Compras"
-            />
-            <img
-              src="./docs/img/tela_07_controle_estoque.png"
-              alt="Tela de Controle de Estoque"
-            />
-            <img
-              src="./docs/img/tela_08_detalhes_estoque.png"
-              alt="Tela de Detalhes do Estoque"
-            />
-            <img
-              src="./docs/img/tela_09_formulario_movimentacoes.png"
-              alt="Tela de Formulário de Movimentações"
-            />
+            <img src="./docs/img/tela_01_principal_produtos.png" alt="Tela Principal de Produtos" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_02_detalhes_produto.png" alt="Tela de Detalhes do Produto" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_03_formulario_produto.png" alt="Tela de Formulário de Produto" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_04.1_pagamento_preparacao.png" alt="Tela de Preparação do Pagamento" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png" alt="Formas de Pagamento (Stripe PaymentSheet)" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_05.1_detalhes_compra.png" alt="Tela de Detalhes da Compra" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png" alt="Compartilhamento de Comprovante" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_06_historico_compras.png" alt="Tela de Histórico de Compras" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_07_controle_estoque.png" alt="Tela de Controle de Estoque" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_08_detalhes_estoque.png" alt="Tela de Detalhes do Estoque" loading="lazy" decoding="async" />
+            <img src="./docs/img/tela_09_formulario_movimentacoes.png" alt="Tela de Formulário de Movimentações" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="fade-in-section">
+        <div class="container">
+          <h2 class="section-title">Tecnologias</h2>
+          <div class="tech-stack">
+            <span class="tech-card">Kotlin Multiplatform</span>
+            <span class="tech-card">Compose Multiplatform</span>
+            <span class="tech-card">Stripe SDK</span>
+            <span class="tech-card">Ktor (Client &amp; Server)</span>
+            <span class="tech-card">Koin</span>
+            <span class="tech-card">SQLDelight</span>
+            <span class="tech-card">Voyager Navigation</span>
+            <span class="tech-card">Kamel</span>
+            <span class="tech-card">Material 3 Expressive</span>
           </div>
         </div>
       </section>
@@ -214,6 +291,14 @@
         <p>&copy; 2025 Stripe Learning App. Todos os direitos reservados.</p>
       </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Fechar">
+        ×
+      </button>
+      <img id="lightboxImg" alt="" />
+    </div>
 
     <script src="js/script.js"></script>
   </body>
