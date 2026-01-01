@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Learning App - Apresentação</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Stripe Learning App</a>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#gallery">Telas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Stripe Learning App</h1>
+                <p>Um aplicativo de aprendizado construído com Kotlin Multiplatform e Compose, explorando o ecossistema de pagamentos da Stripe de ponta a ponta.</p>
+            </div>
+        </section>
+
+        <section id="about" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Sobre o Projeto</h2>
+                <div class="grid-2">
+                    <div>
+                        <h3>A Jornada de Aprendizado</h3>
+                        <p>
+                            Este projeto nasceu como um desafio de aprendizado: construir um sistema completo, desde o backend até o aplicativo móvel, para dominar a integração de pagamentos com a Stripe em um ambiente moderno.
+                        </p>
+                        <p>
+                            Utilizando **Kotlin Multiplatform**, a lógica de negócio, acesso a dados e ViewModels são compartilhados, enquanto a UI é construída com **Compose Multiplatform**, rodando nativamente no Android.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Arquitetura Robusta</h3>
+                        <p>
+                            A arquitetura segue os princípios de **Clean Architecture + MVVM**. O sistema é dividido em duas partes: o App Cliente e um **Backend Ktor** seguro, que protege as chaves da API e orquestra as chamadas sensíveis, garantindo um fluxo de pagamento seguro e escalável.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Funcionalidades</h2>
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Gestão de Produtos</h3>
+                        <p>CRUD completo para criar, editar e remover produtos no catálogo do app.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3>Pagamento Seguro</h3>
+                        <p>Fluxo de pagamento com cartão utilizando o PaymentSheet nativo da Stripe para Android.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-receipt"></i>
+                        <h3>Histórico e Comprovantes</h3>
+                        <p>Persistência de todas as transações e geração de comprovantes em PDF.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <h3>Controle de Estoque</h3>
+                        <p>Sistema para gerenciar a quantidade de produtos e registrar movimentações de entrada e saída.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tech" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Tecnologias</h2>
+                <div class="tech-stack">
+                    <span class="tech-card">Kotlin Multiplatform</span>
+                    <span class="tech-card">Compose Multiplatform</span>
+                    <span class="tech-card">Stripe SDK</span>
+                    <span class="tech-card">Ktor (Client & Server)</span>
+                    <span class="tech-card">Koin</span>
+                    <span class="tech-card">SQLDelight</span>
+                    <span class="tech-card">Voyager Navigation</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Galeria de Telas</h2>
+                <div class="screenshot-gallery">
+                    <img src="./docs/img/tela_01_principal_produtos.png" alt="Tela Principal de Produtos">
+                    <img src="./docs/img/tela_02_detalhes_produto.png" alt="Tela de Detalhes do Produto">
+                    <img src="./docs/img/tela_03_formulario_produto.png" alt="Tela de Formulário de Produto">
+                    <img src="./docs/img/tela_04.1_pagamento_preparacao.png" alt="Tela de Preparação do Pagamento">
+                    <img src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png" alt="Formas de Pagamento (Stripe PaymentSheet)">
+                    <img src="./docs/img/tela_05.1_detalhes_compra.png" alt="Tela de Detalhes da Compra">
+                    <img src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png" alt="Compartilhamento de Comprovante">
+                    <img src="./docs/img/tela_06_historico_compras.png" alt="Tela de Histórico de Compras">
+                    <img src="./docs/img/tela_07_controle_estoque.png" alt="Tela de Controle de Estoque">
+                    <img src="./docs/img/tela_08_detalhes_estoque.png" alt="Tela de Detalhes do Estoque">
+                    <img src="./docs/img/tela_09_formulario_movimentacoes.png" alt="Tela de Formulário de Movimentações">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stripe Learning App. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
