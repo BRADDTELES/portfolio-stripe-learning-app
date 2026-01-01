@@ -59,6 +59,14 @@ nav {
     font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo {
+    height: 2.3rem;
+    width: auto;
 }
 
 .nav-links {
