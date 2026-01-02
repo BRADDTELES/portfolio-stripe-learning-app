@@ -79,6 +79,9 @@
   </head>
 
   <body>
+    <!-- Progress Bar de Scroll -->
+    <div class="scroll-progress"></div>
+
     <header>
       <div class="container">
         <nav aria-label="Navegação principal">
@@ -94,20 +97,28 @@
 
           <ul class="nav-links">
             <li><a href="#about">Sobre</a></li>
+            <li><a href="#stats">Estatísticas</a></li>
             <li><a href="#features">Funcionalidades</a></li>
             <li><a href="#video">Demonstração</a></li>
             <li><a href="#gallery">Telas</a></li>
             <li><a href="#tech">Tecnologias</a></li>
           </ul>
+
+          <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero-animated">
         <div class="container">
-          <h1>Stripe Learning App</h1>
-          <p>
+          <h1>
+            <span id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </h1>
+          <p data-animation="fade-up">
             Um aplicativo de aprendizado, que levou o nome de
             <strong><em>Learn Stripe</em></strong> foi construído com Kotlin
             Multiplatform e Compose, explorando o ecossistema de pagamentos da
@@ -160,6 +171,45 @@
                 API e orquestra as chamadas sensíveis, garantindo um fluxo de
                 pagamento seguro e escalável.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="fade-in-section">
+        <div class="container">
+          <h2 class="section-title">Estatísticas do Projeto</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <h3 class="stat-number" data-target="29">0</h3>
+              <p class="stat-label">Tarefas Concluídas</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3 class="stat-number" data-target="8">0</h3>
+              <p class="stat-label">Ciclos de Desenvolvimento</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-brands fa-android"></i>
+              </div>
+              <h3 class="stat-number" data-target="100">0</h3>
+              <p class="stat-label">% Kotlin Multiplatform</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="stat-number" data-target="100">0</h3>
+              <p class="stat-label">% Clean Architecture</p>
             </div>
           </div>
         </div>
@@ -258,72 +308,115 @@
           <h2 class="section-title">Galeria de Telas</h2>
 
           <div class="screenshot-gallery">
-            <img
-              src="./docs/img/tela_01_principal_produtos.png"
-              alt="Tela Principal de Produtos"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_02_detalhes_produto.png"
-              alt="Tela de Detalhes do Produto"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_03_formulario_produto.png"
-              alt="Tela de Formulário de Produto"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_04.1_pagamento_preparacao.png"
-              alt="Tela de Preparação do Pagamento"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png"
-              alt="Formas de Pagamento (Stripe PaymentSheet)"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_05.1_detalhes_compra.png"
-              alt="Tela de Detalhes da Compra"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png"
-              alt="Compartilhamento de Comprovante"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_06_historico_compras.png"
-              alt="Tela de Histórico de Compras"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_07_controle_estoque.png"
-              alt="Tela de Controle de Estoque"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_08_detalhes_estoque.png"
-              alt="Tela de Detalhes do Estoque"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src="./docs/img/tela_09_formulario_movimentacoes.png"
-              alt="Tela de Formulário de Movimentações"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source srcset="./docs/img/webp/tela_01_principal_produtos.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_01_principal_produtos.png"
+                alt="Tela Principal de Produtos"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_02_detalhes_produto.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_02_detalhes_produto.png"
+                alt="Tela de Detalhes do Produto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_03_formulario_produto.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_03_formulario_produto.png"
+                alt="Tela de Formulário de Produto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_04.1_pagamento_preparacao.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_04.1_pagamento_preparacao.png"
+                alt="Tela de Preparação do Pagamento"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_04.2_pagamento_sheet_formas_de_pagamento.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png"
+                alt="Formas de Pagamento (Stripe PaymentSheet)"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_05.1_detalhes_compra.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_05.1_detalhes_compra.png"
+                alt="Tela de Detalhes da Compra"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png"
+                alt="Compartilhamento de Comprovante"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_06_historico_compras.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_06_historico_compras.png"
+                alt="Tela de Histórico de Compras"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_07_controle_estoque.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_07_controle_estoque.png"
+                alt="Tela de Controle de Estoque"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_08_detalhes_estoque.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_08_detalhes_estoque.png"
+                alt="Tela de Detalhes do Estoque"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./docs/img/webp/tela_09_formulario_movimentacoes.webp" type="image/webp">
+              <img
+                src="./docs/img/tela_09_formulario_movimentacoes.png"
+                alt="Tela de Formulário de Movimentações"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -344,6 +437,36 @@
           </div>
         </div>
       </section>
+
+      <section id="cta" class="cta-section">
+        <div class="container">
+          <h2>Conheça Mais Sobre Meu Trabalho</h2>
+          <p class="cta-description">
+            Explore meu portfólio completo com outros projetos e acesse meu
+            currículo profissional para conhecer minha trajetória como desenvolvedor.
+          </p>
+          <div class="cta-actions">
+            <a
+              href="https://braddteles.github.io/BRADDTELES/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-cta"
+            >
+              <i class="fa-solid fa-briefcase"></i>
+              Ver Portfólio
+            </a>
+            <a
+              href="https://braddteles.github.io/meu_curriculo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost-cta"
+            >
+              <i class="fa-solid fa-file-lines"></i>
+              Acessar Currículo
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -359,6 +482,11 @@
       </button>
       <img id="lightboxImg" alt="" />
     </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
   </body>
