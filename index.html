@@ -81,6 +81,12 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
 
+    <!-- Swiper.js para carrossel de screenshots -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -318,116 +324,135 @@
         <div class="container">
           <h2 class="section-title">Galeria de Telas</h2>
 
-          <div class="screenshot-gallery">
-            <picture>
-              <source srcset="./docs/img/webp/tela_01_principal_produtos.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_01_principal_produtos.png"
-                alt="Tela Principal de Produtos"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_02_detalhes_produto.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_02_detalhes_produto.png"
-                alt="Tela de Detalhes do Produto"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_03_formulario_produto.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_03_formulario_produto.png"
-                alt="Tela de Formulário de Produto"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_04.1_pagamento_preparacao.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_04.1_pagamento_preparacao.png"
-                alt="Tela de Preparação do Pagamento"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_04.2_pagamento_sheet_formas_de_pagamento.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png"
-                alt="Formas de Pagamento (Stripe PaymentSheet)"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_05.1_detalhes_compra.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_05.1_detalhes_compra.png"
-                alt="Tela de Detalhes da Compra"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png"
-                alt="Compartilhamento de Comprovante"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_06_historico_compras.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_06_historico_compras.png"
-                alt="Tela de Histórico de Compras"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_07_controle_estoque.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_07_controle_estoque.png"
-                alt="Tela de Controle de Estoque"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_08_detalhes_estoque.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_08_detalhes_estoque.png"
-                alt="Tela de Detalhes do Estoque"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-
-            <picture>
-              <source srcset="./docs/img/webp/tela_09_formulario_movimentacoes.webp" type="image/webp">
-              <img
-                src="./docs/img/tela_09_formulario_movimentacoes.png"
-                alt="Tela de Formulário de Movimentações"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
+          <div class="swiper screenshot-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_01_principal_produtos.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_01_principal_produtos.png"
+                    alt="Tela Principal de Produtos"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_02_detalhes_produto.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_02_detalhes_produto.png"
+                    alt="Tela de Detalhes do Produto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_03_formulario_produto.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_03_formulario_produto.png"
+                    alt="Tela de Formulário de Produto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_04.1_pagamento_preparacao.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_04.1_pagamento_preparacao.png"
+                    alt="Tela de Preparação do Pagamento"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_04.2_pagamento_sheet_formas_de_pagamento.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_04.2_pagamento_sheet_formas_de_pagamento.png"
+                    alt="Formas de Pagamento (Stripe PaymentSheet)"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_05.1_detalhes_compra.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_05.1_detalhes_compra.png"
+                    alt="Tela de Detalhes da Compra"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_05.2_detalhes_compra_sheet_compartilhar_comprovante.png"
+                    alt="Compartilhamento de Comprovante"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_06_historico_compras.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_06_historico_compras.png"
+                    alt="Tela de Histórico de Compras"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_07_controle_estoque.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_07_controle_estoque.png"
+                    alt="Tela de Controle de Estoque"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_08_detalhes_estoque.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_08_detalhes_estoque.png"
+                    alt="Tela de Detalhes do Estoque"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./docs/img/webp/tela_09_formulario_movimentacoes.webp" type="image/webp">
+                  <img
+                    src="./docs/img/tela_09_formulario_movimentacoes.png"
+                    alt="Tela de Formulário de Movimentações"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- Navegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -561,6 +586,7 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

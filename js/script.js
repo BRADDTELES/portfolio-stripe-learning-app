@@ -373,4 +373,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ============================================
+  // CARROSSEL SWIPER
+  // ============================================
+  
+  // Inicializar carrossel de screenshots
+  const screenshotSwiper = new Swiper('.screenshot-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      640: { slidesPerView: 2, spaceBetween: 15 },
+      1024: { slidesPerView: 3, spaceBetween: 20 },
+    },
+    
+    effect: 'slide',
+    speed: 600,
+    
+    a11y: {
+      prevSlideMessage: 'Slide anterior',
+      nextSlideMessage: 'Próximo slide',
+    },
+  });
+
 });
