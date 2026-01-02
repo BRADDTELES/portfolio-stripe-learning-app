@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ============================================
+  // TEMA DARK/LIGHT
+  // ============================================
+  
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  // Carregar tema salvo ou detectar preferência do sistema
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const defaultTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+  // Aplicar tema inicial
+  root.setAttribute('data-theme', defaultTheme);
+
+  // Toggle de tema
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // Animação de feedback
+      themeToggle.style.transform = 'rotate(360deg)';
+      setTimeout(() => {
+        themeToggle.style.transform = '';
+      }, 300);
+    });
+  }
+
   // Fade-in ao rolar a página
   const sections = document.querySelectorAll('.fade-in-section');
 

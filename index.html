@@ -75,6 +75,12 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- DevIcons para ícones de tecnologias -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -106,6 +112,11 @@
 
           <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
           </button>
         </nav>
       </div>
@@ -425,15 +436,77 @@
         <div class="container">
           <h2 class="section-title">Tecnologias</h2>
           <div class="tech-stack">
-            <span class="tech-card">Kotlin Multiplatform</span>
-            <span class="tech-card">Compose Multiplatform</span>
-            <span class="tech-card">Stripe SDK</span>
-            <span class="tech-card">Ktor (Client &amp; Server)</span>
-            <span class="tech-card">Koin</span>
-            <span class="tech-card">SQLDelight</span>
-            <span class="tech-card">Voyager Navigation</span>
-            <span class="tech-card">Kamel</span>
-            <span class="tech-card">Material 3 Expressive</span>
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="devicon-kotlin-plain colored"></i>
+              </div>
+              <h4 class="tech-name">Kotlin Multiplatform</h4>
+              <p class="tech-description">Framework multiplataforma para compartilhar código</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="devicon-jetpackcompose-plain colored"></i>
+              </div>
+              <h4 class="tech-name">Compose Multiplatform</h4>
+              <p class="tech-description">UI declarativa compartilhada</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="fa-brands fa-stripe" style="color: #635BFF;"></i>
+              </div>
+              <h4 class="tech-name">Stripe SDK</h4>
+              <p class="tech-description">Processamento de pagamentos</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="devicon-kotlin-plain colored"></i>
+              </div>
+              <h4 class="tech-name">Ktor (Client & Server)</h4>
+              <p class="tech-description">Framework HTTP assíncrono</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="fa-solid fa-cube" style="color: #FF6B35;"></i>
+              </div>
+              <h4 class="tech-name">Koin</h4>
+              <p class="tech-description">Injeção de dependência</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="devicon-sqlite-plain colored"></i>
+              </div>
+              <h4 class="tech-name">SQLDelight</h4>
+              <p class="tech-description">Banco de dados type-safe</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="fa-solid fa-route" style="color: #651FFF;"></i>
+              </div>
+              <h4 class="tech-name">Voyager Navigation</h4>
+              <p class="tech-description">Navegação para Compose</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="fa-solid fa-image" style="color: #7C4DFF;"></i>
+              </div>
+              <h4 class="tech-name">Kamel</h4>
+              <p class="tech-description">Carregamento de imagens</p>
+            </div>
+
+            <div class="tech-card-enhanced">
+              <div class="tech-icon-wrapper">
+                <i class="devicon-materialui-plain colored"></i>
+              </div>
+              <h4 class="tech-name">Material 3 Expressive</h4>
+              <p class="tech-description">Design system moderno</p>
+            </div>
           </div>
         </div>
       </section>

@@ -17,6 +17,52 @@
   --shadow-lg: 0 10px 30px rgba(97,31,255,0.2);
 }
 
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #A78BFA;
+  --secondary-color: #8B5CF6;
+  --background-light: #1a1a2e;
+  --text-color: #E5E7EB;
+  --text-light: #9CA3AF;
+  --white: #16213E;
+  --border-color: #374151;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 30px rgba(139,92,246,0.3);
+}
+
+[data-theme="dark"] body {
+  background-color: #0f0f1e;
+}
+
+[datatheme="dark"] .tech-card-enhanced,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .feature-card {
+  background: #0f3460;
+}
+
+[data-theme="dark"] .hero-animated {
+  background: linear-gradient(-45deg, #1a1a2e, #16213E, #0f3460, #1a1a2e);
+}
+
+/* Melhor contraste no Hero Dark */
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero-animated h1 {
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero p,
+[data-theme="dark"] .hero-animated p {
+  color: #E5E7EB;
+  opacity: 1;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Cursor piscante no Dark */
+[data-theme="dark"] .typing-cursor {
+  color: #FFFFFF;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -93,6 +139,74 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 1
 .menu-toggle:hover { transform: scale(1.1); }
 
 .menu-toggle.active i::before { content: "\f00d"; /* fa-times */ }
+
+/* Botão Toggle de Tema */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--primary-color);
+  transform: scale(1.1) rotate(15deg);
+}
+
+.theme-toggle i {
+  position: absolute;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle .fa-moon {
+  color: var(--primary-color);
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-toggle .fa-sun {
+  color: var(--white);
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.theme-toggle:hover .fa-moon {
+  color: var(--white);
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+  opacity: 1;
+  transform: rotate(0deg);
+  color: #FDB813;
+}
+
+[data-theme="dark"] .theme-toggle:hover .fa-sun {
+  color: #FDB813;
+}
+
+/* Transição suave entre temas */
+body,
+.hero,
+.tech-card-enhanced,
+.stat-card,
+.feature-card,
+header {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /* Progress Bar de Scroll */
 .scroll-progress {
@@ -296,7 +410,55 @@ section:nth-of-type(odd) { background-color: var(--background-light); }
   50% { transform: scale(1.3) rotate(-5deg); }
 }
 
-.tech-stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.tech-stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+
+/* Cards de Tecnologias Aprimorados */
+.tech-card-enhanced {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1;
+}
+
+.tech-card-enhanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.tech-icon-wrapper {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-card-enhanced:hover .tech-icon-wrapper {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.tech-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.tech-description {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
 
 /* Seção de Estatísticas */
 .stats-grid {
